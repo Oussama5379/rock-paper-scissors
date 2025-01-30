@@ -25,9 +25,10 @@ function getComputerChoice() {
   }
 }
 function getHumanChoice() {
-  let option = prompt("Please type one of the following options: rock, paper, or scissors");
+  let option = prompt("Please type one of the following options: Rock, Paper, or Scissors");
+  option = option.toLowerCase();
   while (option != "rock" && option != "paper" && option != "scissors") {
-    option = prompt("Please type one of the following options: rock, paper, or scissors");
+    option = prompt("Please type one of the following options: Rock, Paper, or Scissors");
   }
   return option;
 }
