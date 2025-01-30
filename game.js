@@ -1,10 +1,15 @@
 let humanScore = 0;
 let ComputerScore = 0;
+numberOfRounds = Number(prompt("Please enter the number of rounds"));
+for (let i = 0; i < numberOfRounds; i++) {
+  let humanChoice = getHumanChoice();
+  let computerChoice = getComputerChoice();
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+  playRound(humanChoice, computerChoice);
+}
+console.log("The computer score is :" + ComputerScore);
 
-playRound(humanChoice, computerChoice);
+console.log("Your score is :" + humanScore);
 
 function getComputerChoice() {
   randomNumber = Math.ceil(Math.random() * 3);
